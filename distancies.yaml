@@ -1,0 +1,5 @@
+distancies:
+    earth-radius-kilometers: 6371.0
+    earth-radius-miles: 3958.8
+    kilometers-to-miles: 0.621371
+    miles-to-kilometers: 1.609344
