@@ -1,7 +1,8 @@
 # Cities application properties
 
 cities:
-    kilometers-per-degree: 111.32
+    distances:
+        kilometers-per-degree: 111.32
 
 geokeo:
     api:
