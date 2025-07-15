@@ -1,0 +1,26 @@
+# Global application properties
+
+spring:
+    loadbalancer:
+        ribbon:
+            enabled: false
+
+server:
+    port: ${SERVER_PORT:8181}
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    endpoint:
+        health:
+            show-details: always
+            show-components: always
+    tracing:
+        enabled: true
+        sampling:
+            probability: 1.0
+    zipkin:
+        tracing:
+            endpoint: http://zipkin:9411/api/v2/spans
