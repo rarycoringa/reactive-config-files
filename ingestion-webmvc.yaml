@@ -1,0 +1,8 @@
+# Ingestion WebMVC application properties
+
+spring:
+    cassandra:
+        keyspace-name: ingestion_mvc
+    data:
+        redis:
+            database: 2
