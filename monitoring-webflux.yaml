@@ -1,0 +1,6 @@
+# Monitoring WebFlux application properties
+
+spring:
+    data:
+        redis:
+            database: 1

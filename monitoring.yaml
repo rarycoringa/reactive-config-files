@@ -1,0 +1,23 @@
+# Monitoring application properties
+
+spring:
+    data:
+        redis:
+            host: redis
+            port: 6379
+
+monitoring:
+    safe-cuttof:
+        blood-pressure:
+            systolic:
+                top: 12
+                bottom: 90
+            diastolic:
+                top: 80
+                bottom: 60
+        heart-rate:
+            top: 100
+            bottom: 60
+        oxygen-saturation:
+            top: 100
+            bottom: 95
