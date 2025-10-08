@@ -7,17 +7,19 @@ spring:
             port: 6379
 
 monitoring:
-    safe-cuttof:
-        blood-pressure:
-            systolic:
-                top: 12
-                bottom: 90
-            diastolic:
-                top: 80
-                bottom: 60
-        heart-rate:
-            top: 100
-            bottom: 60
-        oxygen-saturation:
-            top: 100
-            bottom: 95
+    blood-pressure:
+        max-value:
+            systolic: 120
+            diastolic: 80
+        min-value:
+            systolic: 90
+            diastolic: 60
+        threshold-seconds: 5
+    heart-rate:
+        max-value: 100
+        min-value: 60
+        threshold-seconds: 5
+    oxygen-saturation:
+        max-value: 100
+        min-value: 95
+        threshold-seconds: 5
