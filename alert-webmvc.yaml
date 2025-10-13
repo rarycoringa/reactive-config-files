@@ -1,0 +1,8 @@
+# Alert WebMVC application properties
+
+spring:
+    cassandra:
+        keyspace-name: alert_mvc
+    data:
+        redis:
+            database: 2
