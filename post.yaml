@@ -1,0 +1,10 @@
+# Post application properties
+
+spring:
+    data:
+        mongodb:
+            uri: ${MONGODB_URI}
+            database: ${MONGODB_DATABASE}
+        redis:
+            host: redis
+            port: 6379
