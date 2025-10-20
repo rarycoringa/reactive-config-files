@@ -8,6 +8,18 @@ spring:
 server:
     port: ${SERVER_PORT:8181}
 
+user:
+    graphql:
+        baseUrl: "http://user/graphql"
+    restapi:
+        baseUrl: "http://user/restapi"
+
+post:
+    graphql:
+        baseUrl: "http://post/graphql"
+    restapi:
+        baseUrl: "http://post/restapi"
+
 management:
     endpoints:
         web:
