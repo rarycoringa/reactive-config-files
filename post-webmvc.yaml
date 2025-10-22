@@ -3,4 +3,4 @@
 spring:
     data:
         redis:
-            database: 2
+            database: 4

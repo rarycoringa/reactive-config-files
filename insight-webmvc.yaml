@@ -1,0 +1,6 @@
+# Insight MCP WebMVC application properties
+
+spring:
+    data:
+        redis:
+            database: 6

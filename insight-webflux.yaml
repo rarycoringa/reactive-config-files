@@ -1,0 +1,6 @@
+# Insight MCP WebFlux application properties
+
+spring:
+    data:
+        redis:
+            database: 5
