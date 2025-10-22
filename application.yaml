@@ -7,8 +7,8 @@ spring:
     spring:
         data:
             mongodb:
-                uri: ${MONGODB_URI}
-                database: ${MONGODB_DATABASE}
+                uri: mongodb://user:pass@mongo:27017/minisocialdb?authSource=admin
+                database: minisocialdb
             redis:
                 host: redis
                 port: 6379
