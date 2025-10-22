@@ -1,8 +1,0 @@
-# Alert WebFlux application properties
-
-spring:
-    cassandra:
-        keyspace-name: alert_flux
-    data:
-        redis:
-            database: 1
