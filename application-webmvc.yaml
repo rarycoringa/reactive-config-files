@@ -3,4 +3,4 @@ spring:
         type: redis
     threads:
         virtual:
-            enabled: true
+            enabled: false
