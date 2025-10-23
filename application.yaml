@@ -31,6 +31,12 @@ post:
     restapi:
         baseUrl: "http://post/restapi"
 
+feed:
+    graphql:
+        baseUrl: "http://feed/graphql"
+    restapi:
+        baseUrl: "http://feed/restapi"
+
 management:
     endpoints:
         web:

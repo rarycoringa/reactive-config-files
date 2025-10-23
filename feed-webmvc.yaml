@@ -1,4 +1,4 @@
-# Insight MCP WebMVC application properties
+# Feed WebMVC application properties
 
 spring:
     data:

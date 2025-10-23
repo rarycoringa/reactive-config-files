@@ -1,4 +1,4 @@
-# Insight MCP WebFlux application properties
+# Feed WebFlux application properties
 
 spring:
     data:
