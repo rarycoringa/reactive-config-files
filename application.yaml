@@ -6,11 +6,8 @@ spring:
             enabled: false
     data:
         mongodb:
-            uri: mongodb://user:pass@mongo:27017/minisocialdb?authSource=admin
-            database: minisocialdb
-        redis:
-            host: redis
-            port: 6379
+            uri: mongodb://user:pass@mongo:27017/ministoredb?authSource=admin
+            database: ministoredb
 
 logging:
     pattern:
@@ -18,24 +15,6 @@ logging:
 
 server:
     port: ${SERVER_PORT:8181}
-
-user:
-    graphql:
-        baseUrl: "http://user/graphql"
-    restapi:
-        baseUrl: "http://user/restapi"
-
-post:
-    graphql:
-        baseUrl: "http://post/graphql"
-    restapi:
-        baseUrl: "http://post/restapi"
-
-feed:
-    graphql:
-        baseUrl: "http://feed/graphql"
-    restapi:
-        baseUrl: "http://feed/restapi"
 
 management:
     endpoints:

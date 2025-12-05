@@ -1,6 +1,0 @@
-# Feed WebFlux application properties
-
-spring:
-    data:
-        redis:
-            database: 5

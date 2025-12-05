@@ -1,6 +1,0 @@
-# Post WebMVC application properties
-
-spring:
-    data:
-        redis:
-            database: 4

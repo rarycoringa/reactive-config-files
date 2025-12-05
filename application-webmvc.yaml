@@ -1,6 +1,0 @@
-spring:
-    cache:
-        type: redis
-    threads:
-        virtual:
-            enabled: false
