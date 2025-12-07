@@ -1,0 +1,12 @@
+# Product application properties - Orchestration profile
+
+spring:
+    cloud:
+        function:
+            definition: processProductCommand
+        stream:
+            bindings:
+                processProductCommand-in-0:
+                    destination: product_commands
+                processProductCommand-out-0:
+                    destination: saga_events

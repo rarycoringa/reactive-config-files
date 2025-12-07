@@ -1,0 +1,12 @@
+# Shipping application properties - Orchestration profile
+
+spring:
+    cloud:
+        function:
+            definition: processShippingCommand
+        stream:
+            bindings:
+                processShippingCommand-in-0:
+                    destination: shipping_commands
+                processShippingCommand-out-0:
+                    destination: saga_events

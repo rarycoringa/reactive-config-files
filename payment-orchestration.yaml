@@ -1,0 +1,12 @@
+# Payment application properties - Orchestration profile
+
+spring:
+    cloud:
+        function:
+            definition: processPaymentCommand
+        stream:
+            bindings:
+                processPaymentCommand-in-0:
+                    destination: payment_commands
+                processPaymentCommand-out-0:
+                    destination: saga_events
