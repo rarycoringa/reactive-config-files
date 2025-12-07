@@ -9,4 +9,4 @@ spring:
                 processOrderEvent-in-0:
                     destination: order_events
                 processOrderEvent-out-0:
-                    destination: product_events,order_feedbacks
+                    destination: product_events
