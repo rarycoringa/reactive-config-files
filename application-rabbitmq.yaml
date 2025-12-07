@@ -1,0 +1,12 @@
+# RabbitMQ profile application properties
+
+spring:
+    cloud:
+        stream:
+            default-binder: rabbit
+    rabbitmq:
+        host: rabbitmq
+        port: 5672
+        username: guest
+        password: guest
+        connect-timeout: 5s

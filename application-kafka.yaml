@@ -1,0 +1,6 @@
+# Kafka profile application properties
+
+spring:
+    cloud:
+        stream:
+            default-binder: kafka
