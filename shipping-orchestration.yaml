@@ -8,7 +8,5 @@ spring:
             bindings:
                 processShippingCommand-in-0:
                     destination: shipping_commands
-                    group: shipping-service
                 processShippingCommand-out-0:
                     destination: saga_events
-                    group: shipping-service

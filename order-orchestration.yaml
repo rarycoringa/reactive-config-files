@@ -8,23 +8,16 @@ spring:
             bindings:
                 processOrderCommand-in-0:
                     destination: order_commands
-                    group: order-service
                 processOrderCommand-out-0:
                     destination: saga_events
-                    group: order-service
                 sinkEvent-in-0:
                     destination: saga_events
-                    group: order-service
                 send-order-command-out-0:
                     destination: order_commands
-                    group: order-service
                 send-product-command-out-0:
                     destination: product_commands
-                    group: order-service
                 send-payment-command-out-0:
                     destination: payment_commands
-                    group: order-service
                 send-shipping-command-out-0:
                     destination: shipping_commands
-                    group: order-service
             
