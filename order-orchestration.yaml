@@ -10,3 +10,5 @@ spring:
                     destination: order_commands
                 processOrderCommand-out-0:
                     destination: saga_events
+                sinkEvent-in-0:
+                    destination: saga_events
