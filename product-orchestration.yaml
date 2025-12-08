@@ -8,5 +8,7 @@ spring:
             bindings:
                 processProductCommand-in-0:
                     destination: product_commands
+                    group: product-service
                 processProductCommand-out-0:
                     destination: saga_events
+                    group: product-service
