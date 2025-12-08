@@ -1,0 +1,12 @@
+# Order application properties - Orchestration profile
+
+spring:
+    cloud:
+        function:
+            definition: processOrderCommand
+        stream:
+            bindings:
+                processOrderCommand-in-0:
+                    destination: order_commands
+                processOrderCommand-out-0:
+                    destination: saga_events

@@ -1,4 +1,4 @@
-# Kafka profile application properties
+# Global application properties - Kafka profile
 
 spring:
     cloud:

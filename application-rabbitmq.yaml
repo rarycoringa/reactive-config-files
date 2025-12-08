@@ -1,4 +1,4 @@
-# RabbitMQ profile application properties
+# Global application properties - RabbitMQ profile
 
 spring:
     cloud:
