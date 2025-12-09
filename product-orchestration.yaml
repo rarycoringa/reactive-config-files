@@ -11,4 +11,4 @@ spring:
                     group: product-service
                 processProductCommand-out-0:
                     destination: saga_events
-                    group: product-service
+                    # group: product-service

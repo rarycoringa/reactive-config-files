@@ -11,4 +11,4 @@ spring:
                     group: payment-service
                 processPaymentCommand-out-0:
                     destination: saga_events
-                    group: payment-service
+                    # group: payment-service

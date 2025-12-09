@@ -11,4 +11,4 @@ spring:
                     group: shipping-service
                 processShippingCommand-out-0:
                     destination: saga_events
-                    group: shipping-service
+                    # group: shipping-service
