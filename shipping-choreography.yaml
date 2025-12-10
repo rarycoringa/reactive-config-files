@@ -11,7 +11,7 @@ spring:
                     destination: payment_events
                     group: shipping-service-group
                     consumer:
-                        spring.json.value.default.type: br.edu.ufrn.shipping.saga.choreography.event.Event
+                        spring.json.value.default.type: br.edu.ufrn.shipping.saga.choreography.event.PaymentEvent
                         spring.json.trusted.packages: br.edu.ufrn.shipping.saga.choreography.event
 
                 processPaymentEvent-out-0:
