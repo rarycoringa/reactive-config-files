@@ -9,30 +9,23 @@ spring:
                 sinkEvent-in-0:
                     destination: saga_events
                     group: saga-events-group
-                    content-type: application/json
 
                 supplyOrderCommand-out-0:
                     destination: order_commands
-                    content-type: application/json
 
                 supplyProductCommand-out-0:
                     destination: product_commands
-                    content-type: application/json
 
                 supplyPaymentCommand-out-0:
                     destination: payment_commands
-                    content-type: application/json
 
                 supplyShippingCommand-out-0:
                     destination: shipping_commands
-                    content-type: application/json
 
                 processOrderCommand-in-0:
                     destination: order_commands
                     group: order-commands-group
-                    content-type: application/json
 
                 processOrderCommand-out-0:
                     destination: saga_events
-                    content-type: application/json
             

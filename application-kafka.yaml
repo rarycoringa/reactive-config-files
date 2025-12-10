@@ -7,15 +7,15 @@ spring:
             kafka:
                 binder:
                     brokers: kafka:9092
-                    auto-create-topics: true
-                    auto-add-partitions: true
-                    min-partition-count: 1
-                    replication-factor: 1 
+                    # auto-create-topics: true
+                    # auto-add-partitions: true
+                    # min-partition-count: 1
+                    # replication-factor: 1 
                     consumer-properties:
                         "value.deserializer": org.springframework.kafka.support.serializer.JsonDeserializer
                         "key.deserializer": org.apache.kafka.common.serialization.StringDeserializer
                         "auto.offset.reset": "earliest"
-                        "spring.json.trusted.packages": "*"
+                        "spring.json.trusted.packages": "br.edu.ufrn.*"
                         "spring.json.use.type.headers": false
                     producer-properties:
                         "value.serializer": org.springframework.kafka.support.serializer.JsonSerializer
