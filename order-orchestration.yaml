@@ -5,6 +5,7 @@ spring:
         function:
             definition: processOrderCommand;sinkEvent
         stream:
+            dynamicDestinations: order_commands,product_commands,payment_commands,shipping_commands
             bindings:
                 processOrderCommand-in-0:
                     destination: order_commands
@@ -18,18 +19,5 @@ spring:
                 sinkEvent-in-0:
                     destination: saga_events
                     group: saga-events-group
-                    content-type: application/json
-
-                send-order-command-out-0:
-                    destination: order_commands
-                    content-type: application/json
-                send-product-command-out-0:
-                    destination: product_commands
-                    content-type: application/json
-                send-payment-command-out-0:
-                    destination: payment_commands
-                    content-type: application/json
-                send-shipping-command-out-0:
-                    destination: shipping_commands
                     content-type: application/json
             
