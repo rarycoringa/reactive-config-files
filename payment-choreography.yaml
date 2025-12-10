@@ -11,8 +11,10 @@ spring:
                     destination: product-events
                     group: payment-service-group
                     consumer:
-                        spring.json.value.default.type: br.edu.ufrn.payment.saga.choreography.event.Event
+                        # spring.json.value.default.type: br.edu.ufrn.payment.saga.choreography.event.Event
                         spring.json.trusted.packages: br.edu.ufrn.payment.saga.choreography.event
+                        spring.json.add.type.headers: true
+                        spring.json.use.type.headers: true
 
                 processProductEvent-out-0:
                     destination: payment-events
@@ -21,8 +23,10 @@ spring:
                     destination: shipping-events
                     group: payment-service-group
                     consumer:
-                        spring.json.value.default.type: br.edu.ufrn.payment.saga.choreography.event.Event
+                        # spring.json.value.default.type: br.edu.ufrn.payment.saga.choreography.event.Event
                         spring.json.trusted.packages: br.edu.ufrn.payment.saga.choreography.event
+                        spring.json.add.type.headers: true
+                        spring.json.use.type.headers: true
 
                 processShippingEvent-out-0:
                     destination: payment-events

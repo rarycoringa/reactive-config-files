@@ -11,8 +11,10 @@ spring:
                     destination: order-events
                     group: product-service-group
                     consumer:
-                        spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.Event
+                        # spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.Event
                         spring.json.trusted.packages: br.edu.ufrn.product.saga.choreography.event
+                        spring.json.add.type.headers: true
+                        spring.json.use.type.headers: true
 
                 processOrderEvent-out-0:
                     destination: product-events
@@ -21,8 +23,10 @@ spring:
                     destination: payment-events
                     group: product-service-group
                     consumer:
-                        spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.Event
+                        # spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.Event
                         spring.json.trusted.packages: br.edu.ufrn.product.saga.choreography.event
+                        spring.json.add.type.headers: true
+                        spring.json.use.type.headers: true
 
                 processPaymentEvent-out-0:
                     destination: product-events
@@ -31,8 +35,10 @@ spring:
                     destination: shipping-events
                     group: product-service-group
                     consumer:
-                        spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.Event
+                        # spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.Event
                         spring.json.trusted.packages: br.edu.ufrn.product.saga.choreography.event
+                        spring.json.add.type.headers: true
+                        spring.json.use.type.headers: true
 
                 processShippingEvent-out-0:
                     destination: product-events
