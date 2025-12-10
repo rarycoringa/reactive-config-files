@@ -10,6 +10,7 @@ spring:
                 processProductEvent-in-0:
                     destination: product-events
                     group: payment-service-group
+                    content-type: application/json
                     consumer:
                         # spring.json.value.default.type: br.edu.ufrn.payment.saga.choreography.event.Event
                         spring.json.trusted.packages: br.edu.ufrn.payment.saga.choreography.event
@@ -22,6 +23,7 @@ spring:
                 processShippingEvent-in-0:
                     destination: shipping-events
                     group: payment-service-group
+                    content-type: application/json
                     consumer:
                         # spring.json.value.default.type: br.edu.ufrn.payment.saga.choreography.event.Event
                         spring.json.trusted.packages: br.edu.ufrn.payment.saga.choreography.event
