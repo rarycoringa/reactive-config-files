@@ -17,8 +17,6 @@ spring:
                     consumer:
                         spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.ProductEvent
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
-                        spring.json.add.type.headers: true
-                        spring.json.use.type.headers: true
 
                 processProductEvent-out-0:
                     destination: order-events
@@ -30,8 +28,6 @@ spring:
                     consumer:
                         spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.PaymentEvent
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
-                        spring.json.add.type.headers: true
-                        spring.json.use.type.headers: true
 
                 processPaymentEvent-out-0:
                     destination: order-events
@@ -43,8 +39,6 @@ spring:
                     consumer:
                         spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.ShippingEvent
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
-                        spring.json.add.type.headers: true
-                        spring.json.use.type.headers: true
 
                 processShippingEvent-out-0:
                     destination: order-events
