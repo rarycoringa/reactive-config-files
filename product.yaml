@@ -1,12 +1,1 @@
 # Product application properties
-
-spring:
-    cloud:
-        function:
-            definition: processOrderEvent
-        stream:
-            bindings:
-                processOrderEvent-in-0:
-                    destination: order_events
-                processOrderEvent-out-0:
-                    destination: product_events
