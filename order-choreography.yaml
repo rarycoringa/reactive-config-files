@@ -13,7 +13,6 @@ spring:
                 processProductEvent-in-0:
                     destination: product-events
                     group: order-service-group
-                    content-type: application/json
                     consumer:
                         spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.ProductEvent
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
@@ -24,7 +23,6 @@ spring:
                 processPaymentEvent-in-0:
                     destination: payment-events
                     group: order-service-group
-                    content-type: application/json
                     consumer:
                         spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.PaymentEvent
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
@@ -35,7 +33,6 @@ spring:
                 processShippingEvent-in-0:
                     destination: shipping-events
                     group: order-service-group
-                    content-type: application/json
                     consumer:
                         spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.ShippingEvent
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
