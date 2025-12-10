@@ -9,22 +9,24 @@ spring:
                 processOrderCommand-in-0:
                     destination: order_commands
                     group: order-service
+                    content-type: application/json
                 processOrderCommand-out-0:
                     destination: saga_events
-                    # group: order-service
+                    content-type: application/json
                 sinkEvent-in-0:
                     destination: saga_events
                     group: order-service
+                    content-type: application/json
                 send-order-command-out-0:
                     destination: order_commands
-                    # group: order-service
+                    content-type: application/json
                 send-product-command-out-0:
                     destination: product_commands
-                    # group: order-service
+                    content-type: application/json
                 send-payment-command-out-0:
                     destination: payment_commands
-                    # group: order-service
+                    content-type: application/json
                 send-shipping-command-out-0:
                     destination: shipping_commands
-                    # group: order-service
+                    content-type: application/json
             

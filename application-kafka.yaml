@@ -7,11 +7,15 @@ spring:
             kafka:
                 binder:
                     brokers: kafka:9092
+                    auto-create-topics: true
+                    auto-add-partitions: true
                     consumer-properties:
                         "value.deserializer": org.springframework.kafka.support.serializer.JsonDeserializer
                         "key.deserializer": org.apache.kafka.common.serialization.StringDeserializer
                         "auto.offset.reset": "earliest"
                         "spring.json.trusted.packages": "*"
+                        "spring.json.type.mapping": "event:br.edu.ufrn.order.saga.orchestration.event.Event"
                     producer-properties:
                         "value.serializer": org.springframework.kafka.support.serializer.JsonSerializer
                         "key.serializer": org.apache.kafka.common.serialization.StringSerializer
+                        "spring.json.add.type.headers": false
