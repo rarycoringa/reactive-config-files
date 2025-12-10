@@ -6,9 +6,13 @@ spring:
             definition: sinkEvent;supplyOrderCommand;supplyProductCommand;supplyPaymentCommand;supplyShippingCommand;processOrderCommand
         stream:
             bindings:
+
                 sinkEvent-in-0:
                     destination: saga_events
                     group: saga-events-group
+                    consumer:
+                        spring.json.value.default.type: br.edu.ufrn.order.saga.orchestration.event.Event
+                        spring.json.trusted.packages: br.edu.ufrn.order.saga.orchestration.event
 
                 supplyOrderCommand-out-0:
                     destination: order_commands
@@ -25,6 +29,9 @@ spring:
                 processOrderCommand-in-0:
                     destination: order_commands
                     group: order-commands-group
+                    consumer:
+                        spring.json.value.default.type: br.edu.ufrn.order.saga.processor.command.Command
+                        spring.json.trusted.packages: br.edu.ufrn.order.saga.processor.command
 
                 processOrderCommand-out-0:
                     destination: saga_events

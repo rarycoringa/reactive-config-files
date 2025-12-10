@@ -6,8 +6,13 @@ spring:
             definition: processShippingCommand
         stream:
             bindings:
+
                 processShippingCommand-in-0:
                     destination: shipping_commands
                     group: shipping-commands-group
+                    consumer:
+                        spring.json.value.default.type: br.edu.ufrn.shipping.saga.processor.command.Command
+                        spring.json.trusted.packages: br.edu.ufrn.shipping.saga.processor.command
+
                 processShippingCommand-out-0:
                     destination: saga_events

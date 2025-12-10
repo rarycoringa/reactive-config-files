@@ -6,8 +6,13 @@ spring:
             definition: processProductCommand
         stream:
             bindings:
+
                 processProductCommand-in-0:
                     destination: product_commands
                     group: product-commands-group
+                    consumer:
+                        spring.json.value.default.type: br.edu.ufrn.product.saga.processor.command.Command
+                        spring.json.trusted.packages: br.edu.ufrn.product.saga.processor.command
+                        
                 processProductCommand-out-0:
                     destination: saga_events

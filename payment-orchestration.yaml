@@ -6,8 +6,13 @@ spring:
             definition: processPaymentCommand
         stream:
             bindings:
+            
                 processPaymentCommand-in-0:
                     destination: payment_commands
                     group: payment-commands-group
+                    consumer:
+                        spring.json.value.default.type: br.edu.ufrn.payment.saga.processor.command.Command
+                        spring.json.trusted.packages: br.edu.ufrn.payment.saga.processor.command
+                
                 processPaymentCommand-out-0:
                     destination: saga_events
