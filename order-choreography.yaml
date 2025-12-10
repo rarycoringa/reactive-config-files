@@ -14,7 +14,7 @@ spring:
                     destination: product_events
                     group: order-service-group
                     consumer:
-                        spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.ProductEvent
+                        spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.Event
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
 
                 processProductEvent-out-0:
@@ -24,7 +24,7 @@ spring:
                     destination: payment_events
                     group: order-service-group
                     consumer:
-                        spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.PaymentEvent
+                        spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.Event
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
 
                 processPaymentEvent-out-0:
@@ -34,7 +34,7 @@ spring:
                     destination: shipping_events
                     group: order-service-group
                     consumer:
-                        spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.ShippingEvent
+                        spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.Event
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
 
                 processShippingEvent-out-0:
