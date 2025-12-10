@@ -12,7 +12,7 @@ spring:
                     group: product-service-group
                     content-type: application/json
                     consumer:
-                        # spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.Event
+                        spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.OrderEvent
                         spring.json.trusted.packages: br.edu.ufrn.product.saga.choreography.event
                         spring.json.add.type.headers: true
                         spring.json.use.type.headers: true
@@ -25,7 +25,7 @@ spring:
                     group: product-service-group
                     content-type: application/json
                     consumer:
-                        # spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.Event
+                        spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.PaymentEvent
                         spring.json.trusted.packages: br.edu.ufrn.product.saga.choreography.event
                         spring.json.add.type.headers: true
                         spring.json.use.type.headers: true
@@ -38,7 +38,7 @@ spring:
                     group: product-service-group
                     content-type: application/json
                     consumer:
-                        # spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.Event
+                        spring.json.value.default.type: br.edu.ufrn.product.saga.choreography.event.ShippingEvent
                         spring.json.trusted.packages: br.edu.ufrn.product.saga.choreography.event
                         spring.json.add.type.headers: true
                         spring.json.use.type.headers: true
