@@ -8,35 +8,35 @@ spring:
             bindings:
 
                 publishOrderEvent-out-0:
-                    destination: order-events
+                    destination: order_events
                 
                 processProductEvent-in-0:
-                    destination: product-events
+                    destination: product_events
                     group: order-service-group
                     consumer:
                         spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.ProductEvent
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
 
                 processProductEvent-out-0:
-                    destination: order-events
+                    destination: order_events
 
                 processPaymentEvent-in-0:
-                    destination: payment-events
+                    destination: payment_events
                     group: order-service-group
                     consumer:
                         spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.PaymentEvent
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
 
                 processPaymentEvent-out-0:
-                    destination: order-events
+                    destination: order_events
 
                 processShippingEvent-in-0:
-                    destination: shipping-events
+                    destination: shipping_events
                     group: order-service-group
                     consumer:
                         spring.json.value.default.type: br.edu.ufrn.order.saga.choreography.event.ShippingEvent
                         spring.json.trusted.packages: br.edu.ufrn.order.saga.choreography.event
 
                 processShippingEvent-out-0:
-                    destination: order-events
+                    destination: order_events
             
