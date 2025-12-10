@@ -8,15 +8,18 @@ spring:
             bindings:
                 processOrderCommand-in-0:
                     destination: order_commands
-                    group: order-service
+                    group: order-commands-group
                     content-type: application/json
+
                 processOrderCommand-out-0:
                     destination: saga_events
                     content-type: application/json
+
                 sinkEvent-in-0:
                     destination: saga_events
-                    group: order-service
+                    group: saga-events-group
                     content-type: application/json
+
                 send-order-command-out-0:
                     destination: order_commands
                     content-type: application/json

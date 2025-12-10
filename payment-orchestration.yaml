@@ -8,7 +8,6 @@ spring:
             bindings:
                 processPaymentCommand-in-0:
                     destination: payment_commands
-                    group: payment-service
+                    group: payment-commands-group
                 processPaymentCommand-out-0:
                     destination: saga_events
-                    # group: payment-service
