@@ -3,7 +3,7 @@
 spring:
     cloud:
         function:
-            definition: processOrderCommand;sinkEvent
+            definition: processOrderCommand;sinkEvent;testProducer;testConsumer
         stream:
             dynamicDestinations: order_commands,product_commands,payment_commands,shipping_commands
             bindings:
@@ -21,3 +21,8 @@ spring:
                     group: saga-events-group
                     content-type: application/json
             
+                testProducer-out-0:
+                    destination: test-topic
+                testConsumer-in-0:
+                    destination: test-topic
+                    group: test-group
