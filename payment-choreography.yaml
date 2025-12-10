@@ -1,0 +1,29 @@
+# Payment application properties - Choreography profile
+
+spring:
+    cloud:
+        function:
+            definition: processProductEvent;processShippingEvent
+        stream:
+            bindings:
+
+                processProductEvent-in-0:
+                    destination: product-events
+                    group: payment-service-group
+                    consumer:
+                        spring.json.value.default.type: br.edu.ufrn.payment.saga.choreography.event.Event
+                        spring.json.trusted.packages: br.edu.ufrn.payment.saga.choreography.event
+
+                processProductEvent-out-0:
+                    destination: payment-events
+
+                processShippingEvent-in-0:
+                    destination: shipping-events
+                    group: payment-service-group
+                    consumer:
+                        spring.json.value.default.type: br.edu.ufrn.payment.saga.choreography.event.Event
+                        spring.json.trusted.packages: br.edu.ufrn.payment.saga.choreography.event
+
+                processShippingEvent-out-0:
+                    destination: payment-events
+            
